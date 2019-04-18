@@ -1,0 +1,15 @@
+<article class="feed">
+  <header class="feed-header">
+    <h1 class="feed-header-title">
+      <a href="{{ .Permalink }}" class="feed-header-link" alt="{{ .Title }}.">
+        {{ .Title }}
+      </a>
+    </h1>
+  </header>
+  <main class="feed-body">
+    {{ .Content | truncate 480 }}
+  </main>
+  <footer class="feed-footer">
+    {{ .Render "tags" }}
+  </footer>
+</article>

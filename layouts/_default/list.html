@@ -10,9 +10,15 @@
         <div class="divider"></div>
       </div>
     </div>
-    <div class="content">
-    {{ .Content }}
-    </div>
+		<div class="content">
+			{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "blog") }}
+
+			{{ range $paginator.Pages }}
+			{{ .Render "feed" }}
+			{{ end }}
+
+			{{ template "_internal/pagination.html" . }}
+		</div>
   </div>
 </section>
 {{ end }}
