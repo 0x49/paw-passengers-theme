@@ -5,6 +5,11 @@
         {{ .Title }}
       </a>
     </h1>
+    {{ if ne .Type "page" }}
+    <p class="feed-header-date date">
+      {{ dateFormat "January 2, 2006" .Date }} by {{ $.Params.author }}
+    </p>
+    {{ end }}
   </header>
   <main class="feed-body">
     {{ .Content | truncate 480 }}
