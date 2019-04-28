@@ -12,7 +12,7 @@
     {{ end }}
   </header>
   <main class="feed-body">
-    {{ .Content | truncate 480 }}
+    {{ .Summary }} <a href="{{ .Permalink }}">Read More</a>
   </main>
   <footer class="feed-footer">
     {{ .Render "tags" }}
