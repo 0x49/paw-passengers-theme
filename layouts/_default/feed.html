@@ -1,20 +1,25 @@
-<article class="feed">
-  <header class="feed-header">
-    <h1 class="feed-header-title">
-      <a href="{{ .Permalink }}" class="feed-header-link" alt="{{ .Title }}.">
-        {{ .Title }}
-      </a>
-    </h1>
-    {{ if ne .Type "page" }}
-    <p class="feed-header-date date">
-      {{ dateFormat "January 2, 2006" .Date }} by {{ $.Params.author }}
-    </p>
-    {{ end }}
-  </header>
-  <main class="feed-body">
-    {{ .Summary }} <a href="{{ .Permalink }}">Read More</a>
-  </main>
-  <footer class="feed-footer">
-    {{ .Render "tags" }}
-  </footer>
+<article class="feed columns is-mobile">
+  <div class="feed-img column is-one-quarter">
+    <img src='{{ .Params.image | default "/images/illustrations/blog/ppi.png"   }}' >
+  </div>
+  <div class="feed-text column">
+    <header class="feed-header">
+      <h1 class="feed-header-title">
+        <a href="{{ .Permalink }}" class="feed-header-link" alt="{{ .Title }}.">
+          {{ .Title }}
+        </a>
+      </h1>
+      {{ if ne .Type "page" }}
+      <p class="feed-header-date date">
+        {{ dateFormat "January 2, 2006" .Date }} by {{ $.Params.author }}
+      </p>
+      {{ end }}
+    </header>
+    <main class="feed-body">
+      {{ .Summary }} <a href="{{ .Permalink }}">Read More</a>
+    </main>
+    <footer class="feed-footer">
+      {{ .Render "tags" }}
+    </footer>
+  </div>
 </article>
