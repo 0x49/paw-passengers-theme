@@ -15,13 +15,6 @@
         <div class="divider"></div>
       </div>
     </div>
-    {{ if eq .Type "blog" }}
-    {{ if isset .Params "image" }}
-    <div class="feature-img">
-      <img src="{{ .Params.image }}" />
-    </div>
-    {{ end}}
-    {{ end }}
     <div class="content">
     {{ .Content }}
     </div>
