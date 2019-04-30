@@ -2,7 +2,7 @@
     {{ range .Params.Tags }}
     {{ $url := printf "%stags/%s/" $.Site.BaseURL . }}
     <li class="tags-tag">
-        <a href="{{ $url }}" class="tag-link" alt="{{ . }}.">
+        <a href="{{ $url | relLangURL }}" class="tag-link" alt="{{ . }}.">
             #{{ . }}
         </a>
     </li>

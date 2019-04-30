@@ -8,7 +8,7 @@
   <div class="container">
     <div class="navbar-brand">
       {{- if $navbarLogo}}
-      <a class="navbar-item" href="{{ $navbarLogo.link }}">
+      <a class="navbar-item" href="{{ $navbarLogo.link | relLangURL }}">
         <img src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="" width="112" height="28">
       </a>
       {{- end}}
@@ -73,7 +73,7 @@
             </span>
           </a>
           {{- else }}
-          <a href="{{ .url }}" class="navbar-item is-secondary">
+          <a href="{{ .url | relLangURL }}" class="navbar-item is-secondary">
             {{ .title }}
           </a>
           {{- end }}
