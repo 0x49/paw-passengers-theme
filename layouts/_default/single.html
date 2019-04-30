@@ -17,9 +17,10 @@
     </div>
     {{ if eq .Type "blog" }}
     {{ if isset .Params "image" }}
-    <div class="feature-img">
+    <figure class="feature-img">
       <img src="{{ .Params.image }}" />
-    </div>
+      <figcaption>{{ .Params.imageCredit }}</figcaption>
+    </figure>
     {{ end}}
     {{ end }}
     <div class="content">
