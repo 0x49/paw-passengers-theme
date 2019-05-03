@@ -78,6 +78,16 @@
         </a>
         {{- end }}
         {{- end }}
+        {{ if and (gt (len .Site.Home.AllTranslations) 1) (.Site.Params.showMenuLanguages | default false ) }}
+          {{- $.Scratch.Set "language" .Language -}}
+          {{ range .Site.Home.AllTranslations }}
+          {{ if ne ($.Scratch.Get "language") .Language }}
+            <a class="navbar-item" href="{{ .Permalink }}">
+              <span class="button rounded secondary-btn">{{ .Language.LanguageName }}</span>
+            </a>
+          {{ end }}
+          {{ end }}
+        {{ end }}
       </div>
     </div>
 </div>
