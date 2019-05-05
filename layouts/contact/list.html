@@ -18,7 +18,7 @@
           <form action="{{ $.Site.Params.form.action }}" method="{{ lower $.Site.Params.form.method }}" class="contact__form" id="contactForm">
             <div class="field is-horizontal">
               <div class="field-label is-normal">
-                <label class="label">From</label>
+                <label class="label">{{ $.Site.Params.form.formLabelFrom }}</label>
               </div>
               <div class="field-body">
                 <div class="field">
@@ -47,7 +47,7 @@
               <div class="field-body">
                 <div class="field">
                   <div class="control">
-                    <textarea class="textarea" name="{{ $.Site.Params.form.inputMsgName }}" placeholder="Say hi" maxlength="{{ $.Site.Params.form.inputMsgLength }}" required></textarea>
+                    <textarea class="textarea" name="{{ $.Site.Params.form.inputMsgName }}" placeholder="{{ $.Site.Params.form.inputMsgPlaceholder }}" maxlength="{{ $.Site.Params.form.inputMsgLength }}" required></textarea>
                   </div>
                 </div>
               </div>
