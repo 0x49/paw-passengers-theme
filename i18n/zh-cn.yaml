@@ -1,2 +1,4 @@
 - id: language
   translation: "中文（简体)"
+- id: followUs
+  translation: "关注我们"
