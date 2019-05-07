@@ -16,6 +16,7 @@
       <div class="columns">
         <div class="contact-form column is-four-fifths">
           <form action="{{ $.Site.Params.form.action }}" method="{{ lower $.Site.Params.form.method }}" class="contact__form" id="contactForm">
+            <input type="hidden" name="_language" value="{{ $.Site.Params.form.recaptchaLang }}" />
             <div class="field is-horizontal">
               <div class="field-label is-normal">
                 <label class="label">{{ $.Site.Params.form.formLabelFrom }}</label>
