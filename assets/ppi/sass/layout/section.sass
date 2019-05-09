@@ -1,0 +1,13 @@
+$section-ppi-padding: 1rem 1.5rem !default
+$section-ppi-padding-medium: 9rem 1.5rem !default
+$section-ppi-padding-large: 18rem 1.5rem !default
+
+.section-ppi
+  padding: $section-ppi-padding
+  // Responsiveness
+  +desktop
+    // Sizes
+    &.is-medium
+      padding: $section-ppi-padding-medium
+    &.is-large
+      padding: $section-ppi-padding-large
