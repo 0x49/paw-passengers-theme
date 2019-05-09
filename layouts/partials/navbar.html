@@ -60,14 +60,14 @@
 
             <div class="navbar-dropdown">
               {{- range .sublinks }}
-              <a href="{{ .url }}" class="navbar-item">
+              <a href="{{ .url | relLangURL }}" class="navbar-item">
                 {{ .title }}
               </a>
               {{- end }}
             </div>
           </div>
           {{- else if .button }}
-          <a href="{{ .url }}" class="navbar-item">
+          <a href="{{ .url | relLangURL }}" class="navbar-item">
             <span class="button signup-button rounded secondary-btn raised">
               {{ .title }}
             </span>
