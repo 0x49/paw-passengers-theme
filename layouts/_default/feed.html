@@ -16,7 +16,7 @@
       {{ end }}
     </header>
     <main class="feed-body">
-      {{ .Summary | truncate 240 }} <a href="{{ .Permalink }}">Read More</a>
+      {{ .Summary | truncate 240 }} <a href="{{ .Permalink }}">{{ i18n "readmore" }}</a>
     </main>
     <footer class="feed-footer">
       {{ .Render "tags" }}
