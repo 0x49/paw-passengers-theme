@@ -2,20 +2,15 @@
 {{- $logo        := index $footer "logo" }}
 {{- $quickLinks  := index $footer "quicklinks" }}
 {{- $socialMedia := index $footer "socialmedia" }}
-{{- $bulmaLogo   := index $footer "bulmalogo" }}
-<footer class="footer footer-dark">
+
+<footer class="footer-ppi footer-dark">
   <div class="container">
-    <div class="columns">
-      <div class="column">
-        <div class="footer-logo">
-          <img src="{{ printf "/images/logos/%s" $logo | relURL }}">
-        </div>
-      </div>
+    <div class="columns is-centered">
       {{- range $quickLinks }}
         <div class="column">
           <div class="footer-column">
             <div class="footer-header">
-                <h3>{{ .title }}</h3>
+              {{ .title }}
             </div>
             <ul class="link-list">
               {{- range .links }}
@@ -29,10 +24,13 @@
           </div>
         </div>
       {{- end }}
+
       <div class="column">
         <div class="footer-column">
           <div class="footer-header">
-            <h3>{{ i18n "followUs" }}</h3>
+            {{ i18n "followUs" }}
+          </div>
+          <div>
             <nav class="level is-mobile">
               <div class="level-left">
                 {{- range $socialMedia }}
@@ -42,15 +40,15 @@
                 {{- end }}
               </div>
             </nav>
-
-            {{- if $bulmaLogo }}
-            <a href="https://bulma.io" target="_blank">
-              <img src="{{ "/images/logos/made-with-bulma.png" | relURL }}" alt="Made with Bulma" width="128" height="24">
-            </a>
-            {{- end }}
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="content has-text-centered footer-content">
+      <p>
+      made with <span class="icon"><i class="fa fa-heart"></i></span> in seattle, hawaii, and torronto | © 2019
+      </p>
     </div>
   </div>
 </footer>

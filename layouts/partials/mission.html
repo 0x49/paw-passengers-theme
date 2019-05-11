@@ -1,0 +1,23 @@
+{{"<!-- Mission section -->" | safeHTML}}
+<section class="section section-feature-grey">
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="columns">
+          <div class="column is-three-fifths revealOnScroll delay-1" data-animation="fadeInLeft">
+            <div class="content">
+              {{ with .Site.Params.about.description }}
+              {{ . | markdownify }}
+              {{ end }}
+            </div>
+          </div>
+          <div class="column is-two-fifths revealOnScroll delay-1" data-animation="fadeInLeft" data-wow-delay="0.3s">
+            <div class="about-slider">
+              {{ range .Site.Params.about.aboutImages }}
+                <img src="{{ printf "/images/%s" .image | relURL }}" alt="slider-image">
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
