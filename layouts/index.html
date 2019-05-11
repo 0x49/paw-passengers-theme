@@ -3,8 +3,16 @@
 {{ partial "hero.html" . }}
 {{ end }}
 
+{{ if .Site.Params.about }}
+{{ partial "about.html" . }}
+{{ end }}
+
 {{ if .Site.Params.section1 }}
 {{ partial "section1.html" . }}
+{{ end }}
+
+{{ if .Site.Params.subscribe }}
+{{ partial "subscribe.html" . }}
 {{ end }}
 
 {{ if .Site.Params.section2 }}
@@ -27,7 +35,7 @@
 {{ partial "footer.html" . }}
 {{ end }}
 
-<!-- Back To Top Button -->
+{{"<!-- Back To Top Button -->" | safeHTML}}
 <div id="backtotop"><a href="#"></a></div>
 
 {{ if .Site.Params.sidebar }}
