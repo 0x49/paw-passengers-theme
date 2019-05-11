@@ -8,24 +8,25 @@
   <section class="section">
     <div class="container">
       <div class="title-wrapper has-text-centered">
-        <h2 class="title is-2">{{ $title }}</h2>
-        <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
+        <h2 class="title">{{ $title }}</h2>
+        <h3 class="subtitle is-muted">{{ $subtitle }}</h3>
         <div class="divider is-centered"></div>
       </div>
 
-      <div class="content-wrapper">
+      <div class="content-wrapper" id="mc_embed_signup">
         <form action="https://pawpassengers.us20.list-manage.com/subscribe/post?u=066f5930a42f78e54d8c51c97&amp;id=1343d35830" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <div class="field has-addons has-addons-centered">
+          <div class="field has-addons has-addons-centered" id="mc_embed_signup_scroll">
             <div class="control">
-              <input class="input" type="email" name="EMAIL" value="" id="mce-EMAIL" placeholder="Email address" required>
+              <input class="input" type="email" name="EMAIL" value="" id="mce-EMAIL" placeholder="{{ i18n "email" | default "Email address" }}" required="required">
             </div>
             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
             <div class="control" style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_066f5930a42f78e54d8c51c97_1343d35830" tabindex="-1" value=""></div>
             <div class="control">
-              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button primary-btn">
+              <input type="submit" value="{{ i18n "subscribe" | default "Subscribe" }}" name="subscribe" id="mc-embedded-subscribe" class="button primary-btn">
             </div>
           </div>
         </form>
+        </div>
       </div>
     </div>
   </section>
