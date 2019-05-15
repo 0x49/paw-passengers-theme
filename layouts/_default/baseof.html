@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
-  <body>
+  <body class="site-ppi">
     <!-- Preloader -->
     <div id="preloader">
       <div id="status"></div>
@@ -10,6 +10,7 @@
     {{ partial "navbar.html" . }}
     {{ block "main" . }}
     {{ end }}
+    {{ partial "footer.html" . }}
     {{ partial "javascript.html" . }}
   </body>
 </html>
