@@ -2,3 +2,7 @@
   translation: "English"
 - id: followUs
   translation: "follow us"
+- id: firstMadeWith
+  translation: "made with"
+- id: secondMadeWith
+  translation: "in seattle, honolulu, and toronto"

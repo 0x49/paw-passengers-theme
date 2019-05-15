@@ -4,10 +4,12 @@ Navbar
 
 //Navbar
 .navbar.is-fresh {
-    position: relative;
+    position: absolute;
+    background-color: #fff0;
+    width: 100%;
     min-height: 3.8rem;
     transition: all .3s;
-    z-index: 99;
+    z-index: 100000;
     .container {
         min-height: 4rem;
     }
@@ -101,7 +103,7 @@ Navbar
 
 //Cloned fixed navbar
 #navbar-clone {
-    position: fixed;
+    background-color: #fff0;
     top: 0;
     left: 0;
     width: 100%;
@@ -110,6 +112,6 @@ Navbar
     z-index: 100;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
     &.is-active {
-        transform: translateY(0); 
+        transform: translateY(0);
     }
 }

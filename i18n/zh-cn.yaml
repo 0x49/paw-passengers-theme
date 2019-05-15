@@ -2,3 +2,7 @@
   translation: "中文（简体)"
 - id: followUs
   translation: "关注我们"
+- id: firstMadeWith
+  translation: "在西雅图，檀香山，和多伦多由"
+- id: secondMadeWith
+  translation: "织成"
