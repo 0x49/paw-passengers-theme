@@ -1,0 +1,25 @@
+{{ define "main" }}
+<section class="section is-medium site-content">
+  <header class="section-header">
+  </header>
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+        <h1 class="title section-title">{{ .Title }}</h1>
+        <h5 class="subtitle is-5 is-muted">{{ .Params.position }}</h5>
+        <div class="divider"></div>
+      </div>
+    </div>
+    {{ if eq .Type "about" }}
+    {{ if isset .Params "photo" }}
+    <figure class="about-photo">
+      <img src="{{ .Params.photo }}" width="350" />
+    </figure>
+    {{ end}}
+    {{ end }}
+    <div class="content">
+    {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
