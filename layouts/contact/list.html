@@ -43,6 +43,19 @@
 
             <div class="field is-horizontal">
               <div class="field-label is-normal">
+                <label class="label">{{ $.Site.Params.form.inputLocationLabel }}</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <textarea class="input" name="{{ $.Site.Params.form.inputLocationName }}" placeholder="{{ $.Site.Params.form.inputLocationPlaceholder }}" required></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal">
+              <div class="field-label is-normal">
                 <label class="label">{{ $.Site.Params.form.inputMsgLabel }}</label>
               </div>
               <div class="field-body">
